@@ -3,7 +3,7 @@
 	<div class="ui three column padded grid">
 		<div class="row">
 			<div class="column">
-				<h3 class="ui header">Type in the colour of Leela's ship, the Planet Express ship:
+				<h3 class="ui header">{{ userInput }} Type in the colour of Leela's ship, the Planet Express ship:
 					<div class="sub header">(the button should change colour based on your input; only enable the button when correct)</div>
 				</h3>
 			</div>
@@ -11,8 +11,8 @@
 				<img class="ui medium image" src="/assets/futurama-planet-express.jpg"><br />
 
 				<div class="ui large action input">
-					<input type="text" value="" />
-					<button class="ui large button">OK</button>
+					<input type="text" value="" [(ngModel)]="userInput"/>
+					<button class="ui large button" [ngStyle]="{backgroundColor: userInput}" (click)="alertMsg()" [disabled]="userInput !== 'electric mucus'">OK</button>
 				</div>
 			</div>
 		</div>
