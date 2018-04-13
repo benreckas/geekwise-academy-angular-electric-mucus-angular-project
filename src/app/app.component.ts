@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 export class AppComponent {
 	public userInput:String;
 
-	alertMsg() {
+	public alertMsg() {
 		alert('hey');
 	}
 }
